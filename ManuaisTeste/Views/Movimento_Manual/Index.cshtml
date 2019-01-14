@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ManuaisTeste.Models.Movimento_Manual>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DAT_MES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DAT_ANO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_PRODUTOID)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.COD_PRODUTO.COD_PRODUTOID)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_LANCAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DES_DESCRICAO)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DAT_MOVIMENTO)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.COD_USUARIO)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.VAL_VALOR)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DAT_MES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DAT_ANO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_PRODUTOID)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.COD_PRODUTO.COD_PRODUTOID)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_LANCAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DES_DESCRICAO)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DAT_MOVIMENTO)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.COD_USUARIO)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.VAL_VALOR)
+        </td>
+        
+    </tr>
+}
+
+</table>
